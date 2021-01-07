@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/krista-ecomerce/static/css/main.268b82ba.chunk.css",
+    "main.js": "/krista-ecomerce/static/js/main.5df662b9.chunk.js",
+    "main.js.map": "/krista-ecomerce/static/js/main.5df662b9.chunk.js.map",
+    "runtime-main.js": "/krista-ecomerce/static/js/runtime-main.23c09f28.js",
+    "runtime-main.js.map": "/krista-ecomerce/static/js/runtime-main.23c09f28.js.map",
+    "static/js/2.5154cda7.chunk.js": "/krista-ecomerce/static/js/2.5154cda7.chunk.js",
+    "static/js/2.5154cda7.chunk.js.map": "/krista-ecomerce/static/js/2.5154cda7.chunk.js.map",
+    "index.html": "/krista-ecomerce/index.html",
+    "static/css/main.268b82ba.chunk.css.map": "/krista-ecomerce/static/css/main.268b82ba.chunk.css.map",
+    "static/js/2.5154cda7.chunk.js.LICENSE.txt": "/krista-ecomerce/static/js/2.5154cda7.chunk.js.LICENSE.txt",
+    "static/media/banner.c459ca93.jpg": "/krista-ecomerce/static/media/banner.c459ca93.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.23c09f28.js",
+    "static/js/2.5154cda7.chunk.js",
+    "static/css/main.268b82ba.chunk.css",
+    "static/js/main.5df662b9.chunk.js"
+  ]
+}
