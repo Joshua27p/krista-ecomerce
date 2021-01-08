@@ -1,7 +1,9 @@
 import React from 'react'
 import Logo from '../../assets/images/logo.png'
+import { useHistory } from 'react-router-dom'
 
 const Header = () => {
+  const history = useHistory();
   return (
     <div>
         <div className="flex justify-end  bg-red-200 p-1.5 items-center h-12">
@@ -24,11 +26,11 @@ const Header = () => {
 
  
         <div className="flex justify-center  font-bold  text-pink-400 h-12">
-            <a className="mx-8" href="/#">Incio</a>
-            <a className="mx-8" href="/#">Vestidos</a>
-            <a className="mx-8" href="/#">Tops</a>
-            <a className="mx-8" href="/#">Palazos</a>
-            <a className="mx-8" href="/#">Enterizos</a>
+            <button onClick={()=> history.push("/")} className="mx-8" >Incio</button>
+            <button className="mx-8" >Vestidos</button>
+            <button className="mx-8" >Tops</button>
+            <button className="mx-8" >Palazos</button>
+            <button className="mx-8" >Enterizos</button>
         </div>
     </div>
   )
