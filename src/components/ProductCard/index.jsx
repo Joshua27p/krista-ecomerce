@@ -4,10 +4,10 @@ function ProductCard(props) {
   const { name, category, image } = props
   return (
    <div className="container my-12 mx-auto px-4 md:px-12">
-     <div class="overflow-hidden rounded-lg shadow-lg">
+     <div className="overflow-hidden rounded-lg shadow-lg">
 
         <a href="/#">
-          <img alt={name} className="block h-auto w-full" src={image}/>
+          <img alt={name} className="block h-72 w-full" src={image}/>
         </a>
 
       <div className="flex items-center justify-between leading-tight p-2 md:p-4">
@@ -26,7 +26,7 @@ function ProductCard(props) {
           </a>
           <a className="no-underline" href="/#">
               <span className="hidden">Like</span>
-              <i className="fa fa-heart hover:text-red-500"></i>
+              <i className="text-gray-400 fa fa-heart hover:text-red-500"></i>
           </a>
       </div>
 
