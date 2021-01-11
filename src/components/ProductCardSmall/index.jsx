@@ -7,7 +7,7 @@ const ProductCardSmall = (props) => {
     <div className="overflow-hidden rounded-lg shadow-lg">
 
        <a href="/#">
-         <img alt={name} className="block h-72 w-full" src={image}/>
+         <img alt={name} className="block h-72 w-64" src={image}/>
        </a>
 
      <div className="flex items-center justify-between leading-tight p-2 md:p-4">
@@ -18,16 +18,11 @@ const ProductCardSmall = (props) => {
          </h1>
      </div>
 
-     <div className="flex items-center justify-between leading-none p-2 md:p-4">
+     <div className="grid items-center justify-between leading-none p-2 md:p-4">
          <a className="flex items-center no-underline hover:underline text-black" href="/#">
-             <p className="ml-2 text-sm">
-                {category}
-             </p>
+             <p className="ml-2 text-sm">{category}</p>
          </a>
-         <a className="no-underline" href="/#">
-             <span className="hidden">Like</span>
-             <i className="text-gray-400 fa fa-heart hover:text-red-500"></i>
-         </a>
+      
          <span>S/. {price}</span>
      </div>
 

@@ -9,17 +9,17 @@ const Catalogue = () => {
 
   return (
  
-      <div className="flex">
+      <div className="flex container mx-10">
         <div>
-          <input className="border-2 border-black" type="text" placeHolder="search"></input>
+          <input className="mb-2 border-2 border-black" type="text" placeHolder="search"></input>
           <ol>
-          <span className="uppercase">Catálogo de productos</span>
+          <span className="uppercase mx-2">Catálogo de productos</span>
             <li className="grid">
-              <button onClick={()=>setProducts(dataProducts.dress)}>Vestidos</button>
-              <button onClick={()=>setProducts(dataProducts.top)}>tops</button>
-              <button>Palazos</button>
-              <button>buzos</button>
-              <button>Enterizos</button>
+              <button className="mt-2 mb-5" onClick={()=>setProducts(dataProducts.dress)}>Vestidos</button>
+              <button className="mb-5" onClick={()=>setProducts(dataProducts.top)}>tops</button>
+              <button className="mb-5">Palazos</button>
+              <button className="mb-5">buzos</button>
+              <button className="mb-2">Enterizos</button>
             </li>
           </ol>
         </div>
