@@ -5,8 +5,8 @@ import { useHistory } from 'react-router-dom'
 const Header = () => {
   const history = useHistory();
   return (
-    <div className="container mx-auto">
-        <div className="flex justify-end  bg-red-200 p-1.5 items-center h-12">
+    <div className="container">
+        <div className=" flex justify-end  bg-red-200  items-center  mx-auto">
           
           <a className="" href="/#">
             <i className="fab fa-instagram fa-2x  text-white mr-1"></i>
@@ -15,9 +15,9 @@ const Header = () => {
             <i className="fab fa-facebook-square fa-2x  text-white mr-10">
             </i>
           </a>
-          <button className=" mr-16 rounded-lg p-1">
-            <i className="far fa-user-circle fa-2x mr-1  text-white"></i>
-            <span className="mx-1 text-gray-500 font-bold ">Entrar</span>
+          <button className=" mr-16 rounded-lg">
+            <i className="far fa-user-circle fa-2x mr-1  py-2  text-white"></i>
+            <span className="text-gray-500 font-bold ml-2">Entrar</span>
           </button>
         </div>
       <div>
@@ -25,12 +25,12 @@ const Header = () => {
       </div>
 
  
-        <div className="flex justify-center  font-bold  text-pink-400 h-12">
-            <button onClick={()=> history.push("/")} className="mx-8" >Incio</button>
-            <button className="mx-8" >Vestidos</button>
-            <button className="mx-8" >Tops</button>
-            <button className="mx-8" >Palazos</button>
-            <button className="mx-8" >Enterizos</button>
+        <div className="md:flex justify-center  font-bold  text-pink-400 h-12">
+            <button onClick={()=> history.push("/")} className="block text-center md:mx-8 mb-2" >Incio</button>
+            <button className="block  mb-2 md:mx-8" >Vestidos</button>
+            <button className="block  mb-2 md:mx-8" >Tops</button>
+            <button className="block  mb-2 md:mx-8" >Palazos</button>
+            <button className="block  mb-2 md:mx-8" >Enterizos</button>
         </div>
     </div>
   )

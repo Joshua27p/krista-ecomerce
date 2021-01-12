@@ -5,7 +5,7 @@ import data from '../../data'
 import navData from '../../navigationData'
 import CardNavigation from '../../components/CardNavigation'
 import ServiceData from '../../UI/ServiceData'
-import Footer from '../../UI/footer/index'
+
 
 const Home = () => {
    
@@ -27,7 +27,7 @@ const Home = () => {
         ))}
       </div>
       <ServiceData />
-      <Footer />
+    
      
    </div>
   )
