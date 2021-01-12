@@ -5,7 +5,7 @@ import { useHistory } from 'react-router-dom'
 const Header = () => {
   const history = useHistory();
   return (
-    <div>
+    <div className="container mx-auto">
         <div className="flex justify-end  bg-red-200 p-1.5 items-center h-12">
           
           <a className="" href="/#">

@@ -10,9 +10,9 @@ import Footer from '../../UI/footer/index'
 const Home = () => {
    
   return (
-    <div>
+    <div className="container">
       <Banner />
-      <div>
+      <div >
         <h1 className="font-sans text-3xl text-center m-5">Productos</h1>
         <div className="flex">
           {navData.card.map(({name, image, button, direction})=>(

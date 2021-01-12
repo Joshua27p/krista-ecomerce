@@ -1,22 +1,24 @@
-import React from 'react'
-import imagenPrueba from '../../assets/images/enterizo_1.jpg'
+import React, { useState } from 'react'
 import InnerImageZoom from 'react-inner-image-zoom'
 import 'react-inner-image-zoom/lib/InnerImageZoom/styles.min.css';
+import dataImagenes from '../../dataImagenes'
+import ImageSmall from '../../components/imageSmall/index'
 
 const ProductDetail = () => {
+    const [principalImage, setImagePrincipal] = useState(dataImagenes.products[0].image)
+     
+    
+
   return (
     <div>
        <main className="my-8">
         <div className="flex container mx-auto px-6 justify-center">
             <div className="md:flex md:items-center">
               <div className="grid">
-                <img className="w-20 mb-6 mr-10" src={imagenPrueba} alt="imagen de prueba"/>
-                <img className="w-20 mb-6 mr-10" src={imagenPrueba} alt="imagen de prueba"/>
-                <img className="w-20 mb-6 mr-10" src={imagenPrueba} alt="imagen de prueba"/>
-
+                  {dataImagenes.products.map(({image})=>(<ImageSmall setImagePrincipal={setImagePrincipal} image={image} />))}
               </div>
                 <div className="w-full h-64 md:w-96 lg:h-96 ">
-                 <InnerImageZoom src={imagenPrueba} zoomSrc={imagenPrueba} className="h-auto w-full rounded-md object-cover max-w-lg mx-auto" />
+                 <InnerImageZoom src={principalImage} zoomSrc={principalImage} className="h-auto w-full rounded-md object-cover max-w-lg mx-auto" />
                 </div>
                 <div className="w-full max-w-lg mx-auto mt-5 md:ml-8 md:mt-0 md:w-1/2">
                     <h3 className="text-gray-700 uppercase text-lg">Vestido kriska </h3>

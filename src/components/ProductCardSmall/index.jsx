@@ -1,7 +1,7 @@
 import React from 'react'
 
 const ProductCardSmall = (props) => {
-  const {name, image, category, price,} = props
+  const {name, image, price,} = props
   return (
     <div>
       <div class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
