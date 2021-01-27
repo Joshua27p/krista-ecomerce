@@ -7,9 +7,9 @@ const ProductCardSmall = (props) => {
 
 
   return (
-    <div>
-      <div className="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
-        <div onClick={()=>history.push('/product/123')} className="cursor-pointer flex items-end justify-end h-56 w-full bg-cover" style={{backgroundImage: `url(${image})`}}>
+    <div className="p-2 w-3/4 mx-auto lg:mx-10  lg:w-52">  
+      <div className="rounded-md shadow-md">
+        <div onClick={()=>history.push('/product/123')} className="cursor-pointer h-72 w-full bg-cover" style={{backgroundImage: `url(${image})`}}>
         </div>
         <div className="px-5 py-3">
           <h3 className="text-gray-700 uppercase">{name}</h3>

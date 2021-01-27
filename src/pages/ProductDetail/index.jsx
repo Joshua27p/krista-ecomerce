@@ -13,18 +13,20 @@ const ProductDetail = () => {
 
   return (
     <div>
-       <main className="my-8">
-        <div className="flex container mx-auto px-6 justify-center">
-            <div className="md:flex md:items-center">
-              <div className="grid">
-                  {dataImagenes.products.map(({image})=>(<ImageSmall setImagePrincipal={setImagePrincipal} image={image} />))}
-              </div>
-                <div className="h-96 md:w-96 lg:h-96 ">
-                 <InnerImageZoom src={principalImage} zoomSrc={principalImage} className="h-full w-full rounded-md object-cover max-w-lg mx-auto" />
-                </div>
+        <main className="my-8">
+            <div className="flex container mx-auto px-6">
+                <div className="flex flex-col">
+                    <div className="flex flex-row md:flex-col  py-2">
+                    {dataImagenes.products.map(({image})=>(
+                    <ImageSmall setImagePrincipal={setImagePrincipal} image={image} />))}
+                    </div>
+                    <div className="h-auto p-1 shadow-xl rounded-xl bg-cover">
+                     <InnerImageZoom src={principalImage} zoomSrc={principalImage} 
+                     className="h-auto w-full rounded-lg object-cover max-w-lg mx-auto" />
+                     </div>
                 <div className="w-full max-w-lg mx-auto mt-5 md:ml-8 md:mt-0 md:w-1/2">
                     <h3 className="text-gray-700 uppercase text-lg">Vestido kriska </h3>
-                    <span className="text-gray-500 mt-3 text-green-700 font-bold">s/.75.00</span>
+                    <span className="text-gray-500 mt-3 font-bold">s/.75.00</span>
                    
                     <div className="mt-2">
                         <label className="text-gray-700 text-sm" for="count">Cantidad</label>

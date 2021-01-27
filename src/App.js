@@ -14,6 +14,7 @@ import Footer from './UI/footer'
 
 function App() {
   return (
+    <div className="md:container md:mx-auto">
     <Router basename={process.env.PUBLIC_URL}>
       <Header />
       <Switch>
@@ -29,6 +30,7 @@ function App() {
       </Switch>
       <Footer />
     </Router>
+</div>
   );
 }
 

@@ -4,8 +4,9 @@ const ImageSmall = (props) => {
   const {image, setImagePrincipal} = props
  
   return (
-    <div  className="w-20 h-24 mb-2  mr-10" onClick={()=>setImagePrincipal(image)}>
-      <img  src={image} alt="Imagen pequeña" className="h-full w-full cursor-pointer" />
+    <div  className="bg-cover mb-2 mx-1 shadow-lg" 
+    onClick={()=>setImagePrincipal(image)}>
+      <img  src={image} alt="Imagen pequeña" className="rounded-md h-full w-full cursor-pointer " />
     </div>
   )
 }

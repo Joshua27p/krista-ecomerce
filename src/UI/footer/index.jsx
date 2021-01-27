@@ -28,7 +28,7 @@ const Footer = () => {
            <button className="bg-gray-900 py-1 hover:bg-gray-500  ease-in duration-100 md:mx-auto text-white mt-2 w-40"type="submit">Enviar</button>
         </div>
         </div>
-      <p className="text-gray-400 text-center mt-5">© 2021 KRISKA | Todos los derechos reservados. diseñado por <a className="hover:underline hover:text-yellow-400"href="/#">Maphack.pe</a></p>
+      <p className="text-gray-400 text-center mt-5">© 2021 KRISKA | Powered by  <a className="hover:underline hover:text-yellow-400"href="/#">Maphack.pe</a></p>
     
     </div>
   )

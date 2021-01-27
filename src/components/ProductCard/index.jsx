@@ -3,11 +3,11 @@ import React from 'react'
 function ProductCard(props) {
   const { name, category, image } = props
   return (
-   <div className="container my-12 mx-auto px-4 md:px-12">
+   <div className="container my-12 mx-auto px-4 md:px-12 w-auto">
      <div className="overflow-hidden rounded-lg shadow-lg">
 
         <a href="/#">
-          <img alt={name} className="block h-72 w-full" src={image}/>
+          <img  alt={name} className="block h-72 w-auto" src={image}/>
         </a>
 
       <div className="flex items-center justify-between leading-tight p-2 md:p-4">
