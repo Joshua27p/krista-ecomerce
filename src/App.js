@@ -15,22 +15,25 @@ import Footer from './UI/footer'
 function App() {
   return (
     <div className="md:container md:mx-auto">
-    <Router basename={process.env.PUBLIC_URL}>
-      <Header />
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route exact path="/catalogue">
-          <Catalogue />
-        </Route>
-        <Route exact path="/product/:id">
-          <ProductDetail />
-        </Route>
-      </Switch>
-      <Footer />
-    </Router>
-</div>
+      {/* se creo un wrapper que contenga todo el body y se le puso las clases relative y el overflow-x-hidden */}
+      <div className="relative overflow-x-hidden">
+        <Router basename={process.env.PUBLIC_URL}>
+          <Header />
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route exact path="/catalogue">
+              <Catalogue />
+            </Route>
+            <Route exact path="/product/:id">
+              <ProductDetail />
+            </Route>
+          </Switch>
+          <Footer />
+        </Router>
+      </div>
+    </div>  
   );
 }
 
