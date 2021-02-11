@@ -21,21 +21,21 @@ const Catalogue = () => {
  
       <div className="lg:flex">
         <div className="p-3 flex md:block justify-center">
-          <input className="p-1 px-2 mb-2 border border-gray-400 rounded-md w-1/2  lg:w-3/4" type="text" placeHolder="search"></input>
-          <ol className="hidden lg:block">
+          <input type="search" className="mx-4 p-1 px-2 border border-gray-400 rounded-md w-1/2  lg:w-3/4"  placeHolder="search"></input>
+          <ol className="hidden lg:block w-32">
             {/* titulo catálogo */}
-            <span className="uppercase mx-2">Catálogo de productos</span>
+            <h3 className="my-7 font-bold uppercase mx-2 text-center">Catálogo de productos</h3>
             {/* contenedor catálogos */}
-            <li className="grid my-5 ">
-                <button className="mt-2 mb-5 hover:bg-red-200" onClick={()=>setProducts(dataProducts.dress)}>Vestidos</button>
-                <button className="mb-5 hover:bg-red-200" onClick={()=>setProducts(dataProducts.top)}>tops</button>
-                <button className="mb-5 hover:bg-red-200">Palazos</button>
-                <button className="mb-5 hover:bg-red-200">buzos</button>
-                <button className="mb-2 hover:bg-red-200">Enterizos</button>
+            <li className="grid my-5">
+                <button className="hover:text-white transition duration-500 ease-in-out font-bold mb-5 hover:bg-red-200" onClick={()=>setProducts(dataProducts.dress)}>Vestidos</button>
+                <button className="hover:text-white transition duration-500 ease-in-out font-bold mb-5 hover:bg-red-200" onClick={()=>setProducts(dataProducts.top)}>tops</button>
+                <button className="hover:text-white transition duration-500 ease-in-out font-bold mb-5 hover:bg-red-200">Palazos</button>
+                <button className="hover:text-white transition duration-500 ease-in-out font-bold mb-5 hover:bg-red-200">buzos</button>
+                <button className="hover:text-white transition duration-500 ease-in-out font-bold mb-2 hover:bg-red-200">Enterizos</button>
             </li>
           </ol>
         </div>
-        <div>
+        <div className="p-3">
           <div className="flex md:block justify-center w-screen"> 
             <input className="p-1  px-2 mb-2 border rounded-sm border-black w-3/4 md:w-44"  placeHolder="Orden por defecto" type="text"/>
           </div>

@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import Logo from '../../assets/images/logo.png'
 import { useHistory } from 'react-router-dom'
 import ToggleShoppingCart from '../../components/Buttons/ToggleShoppingCart';
+import Navbar from '../../components/Navbar';
+import NavbarHidden from '../../components/Navbar/NavbarHidden';
 
 
 const Header = () => {
@@ -10,8 +12,6 @@ const Header = () => {
   const [isShopping ,setIsShopping] = useState(false)  
 
   const handleClick = () => {
-    // const body = document.querySelector('body')
-    // body.classList.add('overflow-hidden')
     setIsOpen(!isOpen)
   }
   const toggleShopButton  = () => {
@@ -33,7 +33,7 @@ const Header = () => {
       </div>
       <div className="flex  items-center">
         {/* HAMBURGER BUTTON */}
-        <button  type="button" className="lg:hidde" onClick={handleClick}>
+        <button  type="button" className="lg:hidden" onClick={handleClick}>
           <svg className="h-6 w-6 fill-current z-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
        
           {!isOpen && (
@@ -44,7 +44,8 @@ const Header = () => {
         {/* componente button toggle para el shopping cart */}
         <ToggleShoppingCart  isShopping={isShopping}  toggleShopButton={toggleShopButton} />
         {/* logo kriska  */}
-        <img onClick={()=>history.push("/")} src={Logo} className="w-40 mx-auto mt-2 cursor-pointer" alt="logo kriska" />
+        <img onClick={()=>history.push("/")} 
+           src={Logo} className="w-40 mx-auto mt-2 cursor-pointer" alt="logo kriska" />
         <div className="relative w-auto z-100">
           {/* boton shoppingcart */}
           <button onClick={toggleShopButton} type="button" 
@@ -56,37 +57,11 @@ const Header = () => {
           </div>
         </div>
       </div>
-      {/* he menu is activate here  */}
-      
-      <div className={`transition duration-700 z-40 w-auto inset-0 absolute bg-red-200 my-12 bg-opacity-95
-        ${ !isOpen 
-        ? "transform -translate-x-full"
-        : "transform translate-x-0"
-        }`}>
-        <div>
-          <button onClick={handleClick}>
-            <svg className="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              {isOpen && (
-              <path fillRule="evenodd" clipRule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z" />
-            )}
-           </svg>
-          </button>
-          {/* menu title */}
-          <h3 className="p-1 text-center hover:text-white w-full ">Menu</h3>
-          {/* contenedor del menu */}
-          <div className="flex flex-col md:flex-row">
-          <button onClick={()=> history.push('/')} className=" hover:text-white p-1 block  md:mx-8 mb-2" >
-            Incio
-          </button>
-          <button onClick={()=> history.push('/catalogue', {product: 'dress'} )} className="block p-1  mb-2 md:mx-8 hover:text-white">
-              Vestidos
-          </button>
-          <button onClick={()=> history.push('/catalogue', {product: 'top'} )} className="hover:text p-1 -white block  mb-2 md:mx-8" >Tops</button>
-          <button className="p-1  hover:text-white block  mb-2 md:mx-8" >Palazos</button>
-          <button className="p-1 hover:text-white block  mb-2 md:mx-8" >Enterizos</button>
-        </div>
-      </div>
-      </div>
+      {/* menu desplegable en mobile */}
+      <Navbar isOpen={isOpen} setIsOpen={setIsOpen} handleClick={handleClick}  />
+      {/* el navbar para desktop */}
+      <NavbarHidden />
+     
     </div>
   )
 }
