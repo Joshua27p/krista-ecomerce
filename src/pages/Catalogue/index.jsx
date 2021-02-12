@@ -1,14 +1,23 @@
 import React, { useState, useEffect }from 'react'
 import ProductCardSmall from '../../components/ProductCardSmall'
 import dataProducts from '../../dataProducts'
- import { useLocation } from 'react-router-dom'
+import { getCategory } from '../../services/category'
+import { useLocation } from 'react-router-dom'
 
 const Catalogue = () => {
   const [products, setProducts] = useState([]);
+  const [category, setCategory] = useState([]);
   const location = useLocation();
    
-  
+  const getCategoryData = async() =>{
+    const categoryData = await getCategory()
+    setCategory(categoryData.data.category)
+  }
+  console.log(category)
+  console.log(category.map((cat) => cat))
   useEffect(()=>{
+    getCategoryData()
+
     if(location.state?.product === 'dress'){
       setProducts(dataProducts.dress)
     }
@@ -27,11 +36,7 @@ const Catalogue = () => {
             <h3 className="my-7 font-bold uppercase mx-2 text-center">Catálogo de productos</h3>
             {/* contenedor catálogos */}
             <li className="grid my-5">
-                <button className="hover:text-white transition duration-500 ease-in-out font-bold mb-5 hover:bg-red-200" onClick={()=>setProducts(dataProducts.dress)}>Vestidos</button>
-                <button className="hover:text-white transition duration-500 ease-in-out font-bold mb-5 hover:bg-red-200" onClick={()=>setProducts(dataProducts.top)}>tops</button>
-                <button className="hover:text-white transition duration-500 ease-in-out font-bold mb-5 hover:bg-red-200">Palazos</button>
-                <button className="hover:text-white transition duration-500 ease-in-out font-bold mb-5 hover:bg-red-200">buzos</button>
-                <button className="hover:text-white transition duration-500 ease-in-out font-bold mb-2 hover:bg-red-200">Enterizos</button>
+              {category.map(({name, _id}) => <button key={_id} className="hover:text-white transition duration-500 ease-in-out font-bold mb-5 hover:bg-red-200" onClick={()=>setProducts(dataProducts.dress)}>{name}</button>) }
             </li>
           </ol>
         </div>
