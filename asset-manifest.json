@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/krista-ecomerce/static/css/main.0ee28fb4.chunk.css",
-    "main.js": "/krista-ecomerce/static/js/main.a6aff865.chunk.js",
-    "main.js.map": "/krista-ecomerce/static/js/main.a6aff865.chunk.js.map",
+    "main.js": "/krista-ecomerce/static/js/main.d335737c.chunk.js",
+    "main.js.map": "/krista-ecomerce/static/js/main.d335737c.chunk.js.map",
     "runtime-main.js": "/krista-ecomerce/static/js/runtime-main.23c09f28.js",
     "runtime-main.js.map": "/krista-ecomerce/static/js/runtime-main.23c09f28.js.map",
     "static/css/2.8bbfe791.chunk.css": "/krista-ecomerce/static/css/2.8bbfe791.chunk.css",
-    "static/js/2.0c49f610.chunk.js": "/krista-ecomerce/static/js/2.0c49f610.chunk.js",
-    "static/js/2.0c49f610.chunk.js.map": "/krista-ecomerce/static/js/2.0c49f610.chunk.js.map",
+    "static/js/2.362c562d.chunk.js": "/krista-ecomerce/static/js/2.362c562d.chunk.js",
+    "static/js/2.362c562d.chunk.js.map": "/krista-ecomerce/static/js/2.362c562d.chunk.js.map",
     "index.html": "/krista-ecomerce/index.html",
     "static/css/2.8bbfe791.chunk.css.map": "/krista-ecomerce/static/css/2.8bbfe791.chunk.css.map",
     "static/css/main.0ee28fb4.chunk.css.map": "/krista-ecomerce/static/css/main.0ee28fb4.chunk.css.map",
-    "static/js/2.0c49f610.chunk.js.LICENSE.txt": "/krista-ecomerce/static/js/2.0c49f610.chunk.js.LICENSE.txt",
+    "static/js/2.362c562d.chunk.js.LICENSE.txt": "/krista-ecomerce/static/js/2.362c562d.chunk.js.LICENSE.txt",
     "static/media/banner.c459ca93.jpg": "/krista-ecomerce/static/media/banner.c459ca93.jpg",
     "static/media/shoppincart.905e6a76.png": "/krista-ecomerce/static/media/shoppincart.905e6a76.png"
   },
   "entrypoints": [
     "static/js/runtime-main.23c09f28.js",
     "static/css/2.8bbfe791.chunk.css",
-    "static/js/2.0c49f610.chunk.js",
+    "static/js/2.362c562d.chunk.js",
     "static/css/main.0ee28fb4.chunk.css",
-    "static/js/main.a6aff865.chunk.js"
+    "static/js/main.d335737c.chunk.js"
   ]
 }
