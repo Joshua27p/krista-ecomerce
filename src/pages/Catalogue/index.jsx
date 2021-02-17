@@ -2,21 +2,29 @@ import React, { useState, useEffect }from 'react'
 import ProductCardSmall from '../../components/ProductCardSmall'
 import dataProducts from '../../dataProducts'
 import { getCategory } from '../../services/category'
-import { useLocation } from 'react-router-dom'
-
+import { useLocation } from 'react-router-dom';
+import { getProducts } from '../../services/catalogue'
+ 
 const Catalogue = () => {
   const [products, setProducts] = useState([]);
   const [category, setCategory] = useState([]);
   const location = useLocation();
    
+  const getProductsData = async (_id) =>{
+    const productsData = await getProducts(null, null,  _id)
+    console.log(productsData.data.result)
+    setProducts(productsData.data.result);
+  }
+   
   const getCategoryData = async() =>{
     const categoryData = await getCategory()
     setCategory(categoryData.data.category)
   }
-  console.log(category)
-  console.log(category.map((cat) => cat))
+  // console.log(category)
+  // console.log(category.map((cat) => cat))
   useEffect(()=>{
     getCategoryData()
+    getProductsData()
 
     if(location.state?.product === 'dress'){
       setProducts(dataProducts.dress)
@@ -36,7 +44,16 @@ const Catalogue = () => {
             <h3 className="my-7 font-bold uppercase mx-2 text-center">Catálogo de productos</h3>
             {/* contenedor catálogos */}
             <li className="grid my-5">
-              {category.map(({name, _id}) => <button key={_id} className="hover:text-white transition duration-500 ease-in-out font-bold mb-5 hover:bg-red-200" onClick={()=>setProducts(dataProducts.dress)}>{name}</button>) }
+              {category.map(({name, _id}) => 
+                <button 
+                  key={_id} 
+                  className="hover:text-white transition duration-500 ease-in-out font-bold mb-5 hover:bg-red-200" 
+                  onClick={()=>{
+                    getProductsData(_id)
+                  }}>
+                    {name}
+                  </button>
+                ) }
             </li>
           </ol>
         </div>
@@ -45,9 +62,13 @@ const Catalogue = () => {
             <input className="p-1  px-2 mb-2 border rounded-sm border-black w-3/4 md:w-44"  placeHolder="Orden por defecto" type="text"/>
           </div>
           <div>
-            {products.map(({name, price, category, image})=>(
-              <ProductCardSmall  name={name} price={price} category={category} image={image}/>
-              ))}
+            {products.map(({name, price, category, images})=>(
+              <ProductCardSmall  
+                  name={name} 
+                  price={price} 
+                  category={category} 
+                  image={images}/>
+            ))}
           </div>
         </div>
       </div>

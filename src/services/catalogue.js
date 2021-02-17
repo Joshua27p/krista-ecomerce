@@ -1,10 +1,11 @@
 import axios from 'axios'
 
-export const getProducts = async(offers, limit) => {
+export const getProducts = async(offers, limit, categories) => {
   const catalogue = await axios.get(`https://kriska-rest.herokuapp.com/catalogue`, {
     params:{
       offers,
-      limit
+      limit,
+      categories
     }
   } );
   return catalogue;
